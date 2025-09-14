@@ -1,0 +1,72 @@
+/* auth.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.toggle-buttons {
+    margin-bottom: 20px;
+}
+
+.toggle-buttons button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 15px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffd633;
+}
+
+.error {
+    color: #ff4c4c;
+    margin-top: 10px;
+}
