@@ -7,6 +7,11 @@ const gameSubject = localStorage.getItem('gameSubject');
 const gameChapter = localStorage.getItem('gameChapter');
 const gameLevel = localStorage.getItem('gameLevel');
 
+document.getElementById('displayClass').textContent = gameClass;
+document.getElementById('displaySubject').textContent = gameSubject;
+document.getElementById('displayChapter').textContent = gameChapter;
+document.getElementById('displayLevel').textContent = gameLevel;
+
 if (!currentUser) {
     window.location.href = 'auth.html';
 }
