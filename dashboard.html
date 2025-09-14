@@ -95,16 +95,26 @@
     <script>
         const startBtn = document.getElementById('startGameBtn');
 
-        startBtn.addEventListener('click', () => {
-            const selectedClass = document.getElementById('classSelect').value;
-            const selectedSubject = document.getElementById('subjectSelect').value;
-            const selectedChapter = document.getElementById('chapterSelect').value;
-            const selectedLevel = document.getElementById('levelSelect').value;
+startBtn.addEventListener('click', () => {
+    const selectedClass = document.getElementById('classSelect').value;
+    const selectedSubject = document.getElementById('subjectSelect').value;
+    const selectedChapter = document.getElementById('chapterSelect').value;
+    const selectedLevel = document.getElementById('levelSelect').value;
 
-            if (!selectedClass || !selectedSubject || !selectedChapter || !selectedLevel) {
-                alert('Please select all fields before starting the game.');
-                return;
-            }
+    if (!selectedClass || !selectedSubject || !selectedChapter || !selectedLevel) {
+        alert('Please select all fields.');
+        return;
+    }
+
+    // Store selections in localStorage
+    localStorage.setItem('gameClass', selectedClass);
+    localStorage.setItem('gameSubject', selectedSubject);
+    localStorage.setItem('gameChapter', selectedChapter);
+    localStorage.setItem('gameLevel', selectedLevel);
+
+    // Redirect to game page
+    window.location.href = 'game.html';
+});
 
             // Save selection to localStorage
             localStorage.setItem('gameClass', selectedClass);
