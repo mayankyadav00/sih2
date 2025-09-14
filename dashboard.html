@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard - EduGamify</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            margin: 15px;
+            width: 250px;
+        }
+
+        .btn {
+            background-color: #ffcc00;
+            color: #000;
+            padding: 12px 25px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .btn:hover {
+            background-color: #ffd633;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to EduGamify Dashboard</h1>
+
+    <div>
+        <label for="classSelect">Select Class:</label><br/>
+        <select id="classSelect">
+            <option value="">-- Select Class --</option>
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="subjectSelect">Select Subject:</label><br/>
+        <select id="subjectSelect">
+            <option value="">-- Select Subject --</option>
+            <option value="math">Math</option>
+            <option value="science">Science</option>
+            <option value="english">English</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="chapterSelect">Select Chapter:</label><br/>
+        <select id="chapterSelect">
+            <option value="">-- Select Chapter --</option>
+            <option value="chapter1">Chapter 1</option>
+            <option value="chapter2">Chapter 2</option>
+            <option value="chapter3">Chapter 3</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="levelSelect">Select Level:</label><br/>
+        <select id="levelSelect">
+            <option value="">-- Select Level --</option>
+            <option value="basic">Basic</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </div>
+
+    <button class="btn" id="startGameBtn">Start Game</button>
+
+    <script>
+        const startBtn = document.getElementById('startGameBtn');
+
+        startBtn.addEventListener('click', () => {
+            const selectedClass = document.getElementById('classSelect').value;
+            const selectedSubject = document.getElementById('subjectSelect').value;
+            const selectedChapter = document.getElementById('chapterSelect').value;
+            const selectedLevel = document.getElementById('levelSelect').value;
+
+            if (!selectedClass || !selectedSubject || !selectedChapter || !selectedLevel) {
+                alert('Please select all fields before starting the game.');
+                return;
+            }
+
+            // Save selection to localStorage
+            localStorage.setItem('gameClass', selectedClass);
+            localStorage.setItem('gameSubject', selectedSubject);
+            localStorage.setItem('gameChapter', selectedChapter);
+            localStorage.setItem('gameLevel', selectedLevel);
+
+            // Navigate to game page
+            window.location.href = 'game.html';
+        });
+    </script>
+</body>
+
+</html>
