@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>EduGamify - Login / Register</title>
-    <link rel="stylesheet" href="auth.css">
+    // In auth.html login form success:
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    window.location.href = 'dashboard.html';
+
 </head>
 
 <body>
