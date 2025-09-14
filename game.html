@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>EduGamify - Flappy Math Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+    <h1>Flappy Math Challenge</h1>
+
+    <div id="gameInfo">
+        <p><strong>Class:</strong> <span id="displayClass"></span></p>
+        <p><strong>Subject:</strong> <span id="displaySubject"></span></p>
+        <p><strong>Chapter:</strong> <span id="displayChapter"></span></p>
+        <p><strong>Level:</strong> <span id="displayLevel"></span></p>
+        <p><strong>Score:</strong> <span id="score">0</span></p>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+
+    <div class="btnContainer">
+        <button class="btn" onclick="endGame()">Finish Game</button>
+        <button class="btn" onclick="window.location.href='leaderboard.html'">View Leaderboard</button>
+        <button class="btn" onclick="window.location.href='achievements.html'">View Achievements</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
